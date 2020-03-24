@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Special+Elite&display=swap");
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,7 +19,7 @@ body {
   overflow-x: hidden; }
 
 body {
-  background: linear-gradient(-45deg, #ffc3a0, #dc7ba0, #FFAFBD, #fba15e);
+  background-image: linear-gradient(-225deg, #FFE29F 0%, #FFA99F 48%, #FF719A 100%);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   background-repeat: no-repeat; }
@@ -41,55 +41,72 @@ body {
   text-shadow: 5px 5px 10px #675e5e;
   color: black; }
 
-.u--card {
+div.row {
+  max-width: 90%;
+  margin: auto; }
+
+div.wrapper {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: baseline; }
+
+.my-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 400px;
+  min-width: 350px;
+  margin: 4% auto;
   position: relative;
   background: #fff;
-  margin: 1rem;
   overflow: hidden;
   border-radius: 6px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(167, 157, 157, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
   transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .my-card button {
+    font-family: 'Didact Gothic', sans-serif;
+    width: 50%;
+    display: block;
+    font-size: 1.2rem;
+    padding: 1%;
+    margin: 6% auto;
+    border: 1.2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 10px -1px #00ffff;
+    cursor: pointer;
+    transition: background 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); }
+  .my-card button:hover {
+    background: #f9f9f9; }
 
-.u--card__1:hover {
+.my-card__1:hover {
   box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.12); }
 
-.u--card__content {
+.my-card__content {
   padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around; }
-  .u--card__content h2 {
-    font-weight: normal;
-    font-size: 1.75rem;
+  .my-card__content h2 {
+    font-size: 150%;
     line-height: 2rem;
-    font-family: 'Berkshire Swash', cursive; }
-  .u--card__content p {
-    font-size: 1.2rem;
+    font-family: 'Special Elite', cursive;
+    text-align: justify;
+    font-weight: bold; }
+  .my-card__content p {
+    font-size: 1.1rem;
     text-align: justify;
     font-family: 'Didact Gothic', sans-serif; }
-  .u--card__content button {
-    font-family: 'Didact Gothic', sans-serif;
-    width: 50%;
-    display: block;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    padding: 1%;
-    margin: auto;
-    border: 1.2px solid rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); }
-  .u--card__content button:hover {
-    background: #f9f9f9; }
 
-.u--card__thumbnail {
+.my-card-img {
   overflow: hidden; }
 
-.u--card__thumbnail img {
+.my-card-img img {
   width: 100%;
-  height: inherit;
+  max-height: 210px;
   border-radius: 6px 6px 0px 0px;
   transition: all 1.2s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
-.u--card:hover > .u--card__thumbnail img {
-  filter: contrast(120%);
-  transform: scale(1.12); }
+.my-card:hover > .my-card-img img {
+  filter: contrast(150%);
+  transform: scale(1.2); }

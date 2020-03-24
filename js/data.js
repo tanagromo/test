@@ -1,8 +1,9 @@
 obtenerNoticias();
 
+// funcion para consumir la api de noticias 
 function obtenerNoticias(){
     
-    let url = 'http://newsapi.org/v2/everything?q=apple&from=2020-03-01&to=2020-03-01&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc'
+    let url = 'http://newsapi.org/v2/everything?q=apple&from=2020-03-01&to=2020-03-01&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc';
     const api = new XMLHttpRequest();
     api.open('GET',url,true);
     api.send();
@@ -15,24 +16,36 @@ function obtenerNoticias(){
            let noticias = document.querySelector('#hot-news');
            noticias.innerHTML = '';
 
-           for(let item of datos.articles){
-               noticias.innerHTML += `
-               <div  class="col-lg-4 col-md-6 col-sm-12">
-               <article class="u--card u--card__1">
-                 <figure class="u--card__thumbnail">
-                   <img src="${item.urlToImage}" alt=""/>
-                 </figure>
-                 <div class="u--card__content">
-                   <h2 id="title">${item.title}</h2>
-                   <p>${item.description}</p>
-             <button>View</button>
-           </div>
-         </article>
-               </div>
-
-         `
+           for(let i = 0; i < 11; i++){
+               item = datos.articles[i];
+               let desc = obtenerPalabras(item.description);
+               noticias.innerHTML += 
+               `
+                <article class="my-card my-card__1">
+                    <figure class="my-card-img">
+                        <img src="${item.urlToImage}" alt=""/>
+                    </figure>
+                    <div class="my-card__content">
+                        <h2 id="title">${item.title}</h2>
+                        <p>${desc}</p>
+                    </div>
+                    <button>Read More</button>
+                </article>
+                `
            }
         }
     }
 
+}
+
+// funcion para obtener sólo las primeras 10 palabras de la descripción de la noticia
+
+function obtenerPalabras(sentence){
+        var result = sentence;
+        var resultArray = result.split(" ");
+        if(resultArray.length > 10){
+        resultArray = resultArray.slice(0, 10);
+        result = resultArray.join(" ") + "...";
+        }
+        return result;
 }
