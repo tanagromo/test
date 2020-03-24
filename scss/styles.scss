@@ -64,6 +64,11 @@ div.row{
         flex-wrap: wrap;
         justify-content: space-between;
         align-content: baseline;
+        .my-card:nth-child(odd) {
+            button{
+                box-shadow: 1px 1px 10px -1px #00ffff;
+            }
+        }
     }
 
   .my-card{
@@ -88,10 +93,11 @@ div.row{
         padding: 1%;
         margin: 6% auto;
         border: 1.2px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 1px 1px 10px -1px #00ffff;
+        box-shadow: 1px 1px 10px -1px #ff95f6;
         cursor: pointer;
         transition: background 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-    } 
+
+    }
     button:hover{
       background:#f9f9f9;
     }
