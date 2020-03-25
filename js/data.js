@@ -1,6 +1,5 @@
 
 
-
 let url = 'http://newsapi.org/v2/everything?q=apple&from=2020-03-01&to=2020-03-01&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc';
 const api = new XMLHttpRequest();
 api.open('GET',url,true);
@@ -35,7 +34,7 @@ function obtenerNoticias(datos){
                         <h2 id="title">${item.title}</h2>
                         <p>${desc}</p>
                     </div>
-                    <a href="noticia.html" class="btn-new" onclick="openNew(${aidi});" ">Read More</a>
+                    <a class="btn-new" href="noticia.html?id=${aidi}"  ">Read More</a>
                     
                 </article>
                 `
@@ -58,14 +57,4 @@ function obtenerPalabras(sentence){
 
 
 
-function openNew(item){
-    api.open('GET',url,true);
-    api.send();
-    api.onreadystatechange = function(){
-        if(this.status == 200 && this.readyState == 4){
-            let datos = JSON.parse(this.responseText);
-            console.log(datos.articles[item]);
-        }
-        
-    }
-}
+

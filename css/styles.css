@@ -135,3 +135,10 @@ div.wrapper {
     line-height: 1.5rem; }
   .my-card__content p {
     font-size: 1rem; } }
+
+#imgnew {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  #imgnew img {
+    width: 100%; }

@@ -175,5 +175,16 @@ div.row{
         p{
             font-size: 1rem;
         }
-      }
+    }
+}
+
+// ******************************Pagina noticia
+
+#imgnew{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    img{
+        width: 100%;
+    }
 }
