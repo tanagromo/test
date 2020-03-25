@@ -101,9 +101,11 @@ div.wrapper {
     line-height: 2rem;
     font-family: 'Special Elite', cursive;
     text-align: justify;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 3% auto; }
   .my-card__content p {
     font-size: 1.1rem;
+    margin: 3% auto;
     text-align: justify;
     font-family: 'Didact Gothic', sans-serif; }
 
@@ -119,3 +121,17 @@ div.wrapper {
 .my-card:hover > .my-card-img img {
   filter: contrast(150%);
   transform: scale(1.2); }
+
+@media (max-width: 501px) {
+  .title {
+    font-size: 15vw; }
+  .my-card {
+    max-width: 275px;
+    min-width: 250px; }
+    .my-card a {
+      font-size: 1rem; }
+  .my-card__content h2 {
+    font-size: 115%;
+    line-height: 1.5rem; }
+  .my-card__content p {
+    font-size: 1rem; } }
