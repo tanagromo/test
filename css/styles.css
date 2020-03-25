@@ -193,7 +193,7 @@ header i {
   .articleHeaderText__divider {
     margin: 24px 0 16px 0; } }
 
-@media (max-width: 800px) {
+@media (max-width: 991px) {
   h3 {
     text-align: center; }
   #complete-cont p {
