@@ -34,7 +34,7 @@ function obtenerNoticias(datos){
                         <h2 id="title">${item.title}</h2>
                         <p>${desc}</p>
                     </div>
-                    <a class="btn-new" href="noticia.html?id=${aidi}"  ">Read More</a>
+                    <a class="btn-new" href="../noticia.html?id=${aidi}"  ">Read More</a>
                     
                 </article>
                 `
