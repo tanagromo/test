@@ -15,7 +15,6 @@ api.onreadystatechange = function(){
 // funcion para consumir la api de noticias 
 function obtenerNoticias(datos){
     
-           console.log(datos.articles);
 
            let noticias = document.querySelector('#hot-news');
            noticias.innerHTML = '';

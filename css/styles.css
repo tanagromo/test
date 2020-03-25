@@ -21,7 +21,6 @@ body {
 
 body {
   background: #f2f4f6;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
   background-repeat: no-repeat; }
@@ -175,7 +174,8 @@ header i {
   flex-direction: column;
   justify-content: space-between; }
   #imgnew img {
-    width: 100%; }
+    width: 100%;
+    object-fit: cover; }
 
 #complete-cont p {
   max-width: 60%;

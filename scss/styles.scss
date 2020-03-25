@@ -15,18 +15,15 @@
     -webkit-print-color-adjust: exact;
   }
   
-  html,
-  body {
+html,
+body {
     width: 100%;
     height: 100%;
-   overflow-x: hidden;
-
-  }
+    overflow-x: hidden;
+}
 
 body {
-background: #f2f4f6
-; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: #f2f4f6; 
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
     background-repeat: no-repeat;
@@ -61,18 +58,18 @@ div.row{
 
 // Cards
 
-    div.wrapper{
-        display: flex;
-        flex-flow: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: baseline;
-        .my-card:nth-child(odd) {
-            a{
-                box-shadow: 1px 1px 10px -1px #00ffff;
-            }
+div.wrapper{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: baseline;
+    .my-card:nth-child(odd) {
+        a{
+            box-shadow: 1px 1px 10px -1px #00ffff;
         }
     }
+}
 
   .my-card{
     display: flex;
@@ -111,6 +108,7 @@ div.row{
     }
     
   }
+
   .my-card__1:hover{
     box-shadow:0 14px 20px rgba(0,0,0,0.10), 0 7px 7px rgba(0,0,0,0.12);
   }
@@ -232,6 +230,7 @@ header{
     justify-content: space-between;
     img{
         width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -252,6 +251,8 @@ header{
     margin: 24px auto 16px auto;
     background: #181818;
 }
+
+// mobile
 
 @media (min-width: 992px){
     .articleHeaderText__divider {

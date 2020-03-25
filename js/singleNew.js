@@ -10,6 +10,7 @@ api.onreadystatechange = function(){
     
 }
 
+//función para extraer datos de una noticia en específico
 
 function openNew(data){
     let url = document.location.href;
@@ -44,8 +45,7 @@ contenido.innerHTML +=
     
 
 `
-    console.log("news",data)
-    console.log(item)
+   
 
 }
 
