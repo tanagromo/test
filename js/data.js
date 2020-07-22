@@ -1,6 +1,6 @@
 
 
-let url = 'https://newsapi.org/v2/everything?q=apple&from=2020-03-01&to=2020-03-01&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc';
+let url = 'https://newsapi.org/v2/everything?q=apple&from=2020-07-07&to=2020-07-08&sortBy=popularity&apiKey=d6736e08a3ac4859aeda69469b97d4cc';
 const api = new XMLHttpRequest();
 api.open('GET',url,true);
 api.send();
